@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    <link rel="stylesheet" href="macky.css"> <!-- Link your stylesheet for consistent styling -->
+</head>
+<body>
+    <header>
+        <h1>Certificate Verification</h1>
+    </header>
+
+    <main>
+        <p>Enter the certificate serial number to verify:</p>
+        <form id="verificationForm">
+            <label for="serialNumber">Enter Serial Number:</label><br>
+            <input type="text" id="serialNumber" name="serialNumber" required><br><br>
+            <button type="button" onclick="verifyCertificate()">Verify</button>
+        </form>
+    </main>
+
+    <script>
+        // JavaScript function to handle certificate verification
+        function verifyCertificate() {
+            const serialNumber = document.getElementById('serialNumber').value;
+            if (serialNumber) {
+                alert(`Verifying certificate with serial number: ${serialNumber}`);
+                // You can add your logic here to perform the actual verification
+            } else {
+                alert('Please enter a serial number.');
+            }
+        }
+    </script>
+</body>
+</html>
